@@ -51,6 +51,7 @@ function App() {
       <Route path={"/docs"} element={loading?<Loading/> :<>{<><NavBar isPrimeUser={islogin?user.isPrimeUser:false} islogin={islogin} user={user}/><Documenation/></> }</>}/>
       <Route path={"/dashboard"} element={loading?<Loading/> :<>{islogin?<Dashboard user={user}/> : <Login/> }</>}/>
       <Route path={"/premium"} element={loading?<Loading/> :<>{islogin ?<><NavBar isPrimeUser={islogin?user.isPrimeUser:false} islogin={islogin} user={user}/><GetPremiumPage/></>:<Login/> }</>}/>
+      <Route path={"/loading"} element={<Loading/>}/>
       {/* <Route path={"/visualize/:database_name"} element={<>{<DatabaseVisualize/> }</>}/> */}
         
       </Routes>

@@ -1,13 +1,37 @@
 import React from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import docs1 from "../Docs1.png";
+import docs2 from "../Docs2.png";
+import docs3 from "../Docs3.png";
+import docs4 from "../Docs4.png";
+import docs5 from "../Docs5.png";
+import docs6 from "../Docs6.png";
+import docs7 from "../Docs7.png";
+import docs8 from "../Docs8.png";
+import docs9 from "../Docs9.png";
+
 const Documentation = () => {
   const URL = "https://urldb-backend.onrender.com";
 
+
+  function callcopiedtoaster(){
+    toast.success('Link Copied', {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+      });
+  }
   return (
     <div className="flex flex-col m-0 p-0 ">
       
       <div className="bg-white flex lg:pl-24 mt-20">
-        <div className="hidden sticky top-0 md:flex flex-col gap-2 px-5 py-10 max-w-80 max-h-[90vh] overflow-y-auto">
+        <div className="hidden sticky top-0 md:flex flex-col gap-2 px-5 py-10 max-w-80 max-h-[85vh] overflow-y-auto">
           <a href="#main-1"  className="text-xl font-semibold ">Get Api Secret Key</a>
           <div className="flex flex-col gap-2 pl-5">
             <a href="#1-sub-1" className=" cursor-pointer">Create account</a>
@@ -173,20 +197,26 @@ const Documentation = () => {
               Sample Parameter Link:
             </h1>
             <div className="ml-10 h-auto bg-slate-900 border-2 flex flex-wrap justify-between cursor-pointer  border-gray-200 rounded-lg    text-slate-200 px-3 py-1 text-lg font-mono my-2">
-              <h3 className=" overflow-x-auto">
+              <button onClick={()=>{navigator.clipboard.writeText(URL +
+                  "/{version}/{API_SECRET_KEY}/create_modal/{database_name}/{new_modal_name}");
+                  callcopiedtoaster()
+                  }} className=" overflow-x-auto text-left">
                 {URL +
                   "/{version}/{API_SECRET_KEY}/create_modal/{database_name}/{new_modal_name}"}
-              </h3>
+              </button>
               {/* <h2 className="text-slate-600 ">//Just for Example</h2> */}
             </div>
             <h1 className="ml-10 text-xl font-mono font-medium mt-5">
               Example with values:
             </h1>
             <div className="ml-10 h-auto bg-slate-900 border-2 flex flex-wrap justify-between cursor-pointer border-gray-200 rounded-lg   text-slate-200 px-3 py-1 text-lg font-mono my-2">
-              <h3 className=" overflow-x-auto">
+              <button onClick={()=>{navigator.clipboard.writeText(URL +
+                  "/1/m1715181391598/create_modal/{database_name}/{new_modal_name}");
+                  callcopiedtoaster()
+                  }} className=" overflow-x-auto text-left">
                 {URL +
                   "/1/m1715181391598/create_modal/{database_name}/{new_modal_name}"}
-              </h3>
+              </button>
               {/* <h2 className="text-slate-600 ">//Just for Example</h2> */}
             </div>
             <div>
@@ -205,23 +235,29 @@ const Documentation = () => {
                 Sample Parameter Link:
               </h1>
               <div className="ml-10 h-auto bg-slate-900 border-2 flex flex-wrap justify-between cursor-pointer  border-gray-200 rounded-lg   text-slate-200 px-3 py-1 text-lg font-mono my-2">
-                <h3 className=" overflow-x-auto">
+                <button onClick={()=>{navigator.clipboard.writeText(URL +
+                  "/{version}/{API_SECRET_KEY}/create_db/{database_name}");
+                  callcopiedtoaster()
+                  }} className=" overflow-x-auto text-left">
                   {URL +
                     "/{version}/{API_SECRET_KEY}/create_db/{database_name}"}
-                </h3>
+                </button>
                 {/* <h2 className="text-slate-600 ">//Just for Example</h2> */}
               </div>
               <h1 className="ml-10 text-xl font-mono font-medium mt-5">
                 Example with values:
               </h1>
               <div className="ml-10 h-auto bg-slate-900 border-2 flex flex-wrap justify-between cursor-pointer border-gray-200 rounded-lg   text-slate-200 px-3 py-1 text-lg font-mono my-2">
-                <h3 className=" overflow-x-auto">{URL + "/1/m1715181391598/create_db/myproject"}</h3>
+                <button onClick={()=>{navigator.clipboard.writeText(URL +
+                  "/1/m1715181391598/create_db/myproject");
+                  callcopiedtoaster()
+                  }} className=" overflow-x-auto text-left">{URL + "/1/m1715181391598/create_db/myproject"}</button>
                 {/* <h2 className="text-slate-600 ">//Just for Example</h2> */}
               </div>
               <h1 className="ml-10 text-xl font-mono font-medium mt-5">
                 Response :
               </h1>
-              <img alt=""                 src={docs1}
+              <img alt=""                 src={docs2}
                 className="w-[90%] self-center mx-auto border border-black mt-5 rounded-lg"
               ></img>
             </div>
@@ -242,25 +278,31 @@ const Documentation = () => {
                 Sample Parameter Link:
               </h1>
               <div className="ml-10 h-auto bg-slate-900 border-2 flex flex-wrap justify-between cursor-pointer  border-gray-200 rounded-lg   text-slate-200 px-3 py-1 text-lg font-mono my-2">
-                <h3 className=" overflow-x-auto">
+                <button onClick={()=>{navigator.clipboard.writeText(URL +
+                  "/{version}/{API_SECRET_KEY}/create_modal/{database_name}/{modal_name}");
+                  callcopiedtoaster()
+                  }} className=" overflow-x-auto text-left">
                   {URL +
                     "/{version}/{API_SECRET_KEY}/create_modal/{database_name}/{modal_name}"}
-                </h3>
+                </button>
                 {/* <h2 className="text-slate-600 ">//Just for Example</h2> */}
               </div>
               <h1 className="ml-10 text-xl font-mono font-medium mt-5">
                 Example with values:
               </h1>
               <div className="ml-10 h-auto bg-slate-900 border-2 flex flex-wrap justify-between cursor-pointer  border-gray-200 rounded-lg   text-slate-200 px-3 py-1 text-lg font-mono my-2">
-                <h3 className=" overflow-x-auto">
+                <button onClick={()=>{navigator.clipboard.writeText(URL +
+                  "/1/m1715181391598/create_modal/myproject/usermodal");
+                  callcopiedtoaster()
+                  }} className=" overflow-x-auto text-left">
                   {URL + "/1/m1715181391598/create_modal/myproject/usermodal"}
-                </h3>
+                </button>
                 {/* <h2 className="text-slate-600 ">//Just for Example</h2> */}
               </div>
               <h1 className="ml-10 text-xl font-mono font-medium mt-5">
                 Response :
               </h1>
-              <img alt=""                 src={docs1}
+              <img alt=""                 src={docs3}
                 className="w-[90%] self-center mx-auto border border-black mt-5 rounded-lg"
               ></img>
             </div>
@@ -284,26 +326,32 @@ const Documentation = () => {
                 Sample Parameter Link:
               </h1>
               <div className="ml-10 h-auto bg-slate-900 border-2 flex flex-wrap justify-between cursor-pointer  border-gray-200 rounded-lg   text-slate-200 px-3 py-1 text-lg font-mono my-2">
-                <h3 className=" overflow-x-auto">
+                <button onClick={()=>{navigator.clipboard.writeText(URL +
+                  "/{version}/{API_SECRET_KEY}/add_data/{database_name}/{modal_name}?feild1:value1&field2:value2");
+                  callcopiedtoaster()
+                  }} className=" overflow-x-auto text-left">
                   {URL +
                     "/{version}/{API_SECRET_KEY}/add_data/{database_name}/{modal_name}?feild1:value1&field2:value2"}
-                </h3>
+                </button>
                 {/* <h2 className="text-slate-600 ">//Just for Example</h2> */}
               </div>
               <h1 className="ml-10 text-xl font-mono font-medium mt-5">
                 Example with values:
               </h1>
               <div className="ml-10 h-auto bg-slate-900 border-2 flex flex-wrap justify-between cursor-pointer  border-gray-200 rounded-lg   text-slate-200 px-3 py-1 text-lg font-mono my-2">
-                <h3 className=" overflow-x-auto">
+                <button onClick={()=>{navigator.clipboard.writeText(URL +
+                  "/1/m1715181391598/add_data/myproject/usermodal?id=1&name=Manas&username=manaspatidar170&location=Indore");
+                  callcopiedtoaster()
+                  }} className=" overflow-x-auto text-left">
                   {URL +
                     "/1/m1715181391598/add_data/myproject/usermodal?id=1&name=Manas&username=manaspatidar170&location=Indore"}
-                </h3>
+                </button>
                 {/* <h2 className="text-slate-600 ">//Just for Example</h2> */}
               </div>
               <h1 className="ml-10 text-xl font-mono font-medium mt-5">
                 Response :
               </h1>
-              <img alt=""                 src={docs1}
+              <img alt=""                 src={docs4}
                 className="w-[90%] self-center mx-auto border border-black mt-5 rounded-lg"
               ></img>
             </div>
@@ -333,26 +381,32 @@ const Documentation = () => {
                 Sample Parameter Link:
               </h1>
               <div className="ml-10 h-auto bg-slate-900 border-2 flex flex-wrap justify-between cursor-pointer  border-gray-200 rounded-lg   text-slate-200 px-3 py-1 text-lg font-mono my-2">
-                <h3 className=" overflow-x-auto">
+                <button onClick={()=>{navigator.clipboard.writeText(URL +
+                  "/{version}/{API_SECRET_KEY}/get_data/{database_name}/{modal_name}?field1=value1&field2=value2");
+                  callcopiedtoaster()
+                  }} className=" overflow-x-auto text-left">
                   {URL +
                     "/{version}/{API_SECRET_KEY}/get_data/{database_name}/{modal_name}?field1=value1&field2=value2"}
-                </h3>
+                </button>
                 {/* <h2 className="text-slate-600 ">//Just for Example</h2> */}
               </div>
               <h1 className="ml-10 text-xl font-mono font-medium mt-5">
                 Example with values:
               </h1>
               <div className="ml-10 h-auto bg-slate-900 border-2 flex flex-wrap justify-between cursor-pointer  border-gray-200 rounded-lg   text-slate-200 px-3 py-1 text-lg font-mono my-2">
-                <h3 className=" overflow-x-auto">
+                <button onClick={()=>{navigator.clipboard.writeText(URL +
+                  "/1/m1715181391598/get_data/myproject/usermodal?location=Indore");
+                  callcopiedtoaster()
+                  }} className=" overflow-x-auto text-left">
                   {URL +
                     "/1/m1715181391598/get_data/myproject/usermodal?location=Indore"}
-                </h3>
+                </button>
                 {/* <h2 className="text-slate-600 ">//Just for Example</h2> */}
               </div>
               <h1 className="ml-10 text-xl font-mono font-medium mt-5">
                 Response :
               </h1>
-              <img alt=""                 src={docs1}
+              <img alt=""                 src={docs5}
                 className="w-[90%] self-center mx-auto border border-black mt-5 rounded-lg"
               ></img>
             </div>
@@ -375,25 +429,31 @@ const Documentation = () => {
                 Sample Parameter Link:
               </h1>
               <div className="ml-10 h-auto bg-slate-900 border-2 flex flex-wrap justify-between cursor-pointer  border-gray-200 rounded-lg   text-slate-200 px-3 py-1 text-lg font-mono my-2">
-                <h3 className=" overflow-x-auto">
+                <button onClick={()=>{navigator.clipboard.writeText(URL +
+                  "/{version}/{API_SECRET_KEY}/get_all_data/{database_name}/{modal_name}");
+                  callcopiedtoaster()
+                  }} className=" overflow-x-auto text-left">
                   {URL +
                     "/{version}/{API_SECRET_KEY}/get_all_data/{database_name}/{modal_name}"}
-                </h3>
+                </button>
                 {/* <h2 className="text-slate-600 ">//Just for Example</h2> */}
               </div>
               <h1 className="ml-10 text-xl font-mono font-medium mt-5">
                 Example with values:
               </h1>
               <div className="ml-10 h-auto bg-slate-900 border-2 flex flex-wrap justify-between cursor-pointer  border-gray-200 rounded-lg   text-slate-200 px-3 py-1 text-lg font-mono my-2">
-                <h3 className=" overflow-x-auto">
+                <button onClick={()=>{navigator.clipboard.writeText(URL +
+                  "/1/m1715181391598/get_all_data/myproject/usermodal");
+                  callcopiedtoaster()
+                  }} className=" overflow-x-auto text-left">
                   {URL + "/1/m1715181391598/get_all_data/myproject/usermodal"}
-                </h3>
+                </button>
                 {/* <h2 className="text-slate-600 ">//Just for Example</h2> */}
               </div>
               <h1 className="ml-10 text-xl font-mono font-medium mt-5">
                 Response :
               </h1>
-              <img alt=""                 src={docs1}
+              <img alt=""                 src={docs6}
                 className="w-[90%] self-center mx-auto border border-black mt-5 rounded-lg"
               ></img>
             </div>
@@ -415,23 +475,29 @@ const Documentation = () => {
                 Sample Parameter Link:
               </h1>
               <div className="ml-10 h-auto bg-slate-900 border-2 flex flex-wrap justify-between cursor-pointer  border-gray-200 rounded-lg   text-slate-200 px-3 py-1 text-lg font-mono my-2">
-                <h3 className=" overflow-x-auto">
+                <button onClick={()=>{navigator.clipboard.writeText(URL +
+                  "/{version}/{API_SECRET_KEY}/get_all_modal/{database_name}");
+                  callcopiedtoaster()
+                  }} className=" overflow-x-auto text-left">
                   {URL +
                     "/{version}/{API_SECRET_KEY}/get_all_modal/{database_name}"}
-                </h3>
+                </button>
                 {/* <h2 className="text-slate-600 ">//Just for Example</h2> */}
               </div>
               <h1 className="ml-10 text-xl font-mono font-medium mt-5">
                 Example with values:
               </h1>
               <div className="ml-10 h-auto bg-slate-900 border-2 flex flex-wrap justify-between cursor-pointer  border-gray-200 rounded-lg   text-slate-200 px-3 py-1 text-lg font-mono my-2">
-                <h3 className=" overflow-x-auto">{URL + "/1/m1715181391598/get_all_modal/myproject"}</h3>
+                <button onClick={()=>{navigator.clipboard.writeText(URL +
+                  "/1/m1715181391598/get_all_modal/myproject");
+                  callcopiedtoaster()
+                  }} className=" overflow-x-auto text-left">{URL + "/1/m1715181391598/get_all_modal/myproject"}</button>
                 {/* <h2 className="text-slate-600 ">//Just for Example</h2> */}
               </div>
               <h1 className="ml-10 text-xl font-mono font-medium mt-5">
                 Response :
               </h1>
-              <img alt=""                 src={docs1}
+              <img alt=""                 src={docs7}
                 className="w-[90%] self-center mx-auto border border-black mt-5 rounded-lg"
               ></img>
             </div>
@@ -456,28 +522,32 @@ const Documentation = () => {
                 Sample Parameter Link:
               </h1>
               <div className="ml-10 h-auto bg-slate-900 border-2 flex flex-wrap justify-between cursor-pointer  border-gray-200 rounded-lg   text-slate-200 px-3 py-1 text-lg font-mono my-2">
-                <h3 className="
- overflow-x-auto">
+                <button onClick={()=>{navigator.clipboard.writeText(URL +
+                  "/{version}/{API_SECRET_KEY}/delete_data/{database_name}/{modal_name}?field1=value1&field2=value2");
+                  callcopiedtoaster()
+                  }} className=" overflow-x-auto text-left">
                   {URL +
                     "/{version}/{API_SECRET_KEY}/delete_data/{database_name}/{modal_name}?field1=value1&field2=value2"}
-                </h3>
+                </button>
                 {/* <h2 className="text-slate-600 ">//Just for Example</h2> */}
               </div>
               <h1 className="ml-10 text-xl font-mono font-medium mt-5">
                 Example with values:
               </h1>
               <div className="ml-10 h-auto bg-slate-900 border-2 flex flex-wrap justify-between cursor-pointer  border-gray-200 rounded-lg   text-slate-200 px-3 py-1 text-lg font-mono my-2">
-                <h3 className="
- overflow-x-auto">
+                <button onClick={()=>{navigator.clipboard.writeText(URL +
+                  "/1/m1715181391598/delete_data/myproject/usermodal?location=Indore");
+                  callcopiedtoaster()
+                  }} className=" overflow-x-auto text-left">
                   {URL +
                     "/1/m1715181391598/delete_data/myproject/usermodal?location=Indore"}
-                </h3>
+                </button>
                 {/* <h2 className="text-slate-600 ">//Just for Example</h2> */}
               </div>
               <h1 className="ml-10 text-xl font-mono font-medium mt-5">
                 Response :
               </h1>
-              <img alt=""                 src={docs1}
+              <img alt=""                 src={docs8}
                 className="w-[90%] self-center mx-auto border border-black mt-5 rounded-lg"
               ></img>
             </div>
@@ -501,26 +571,31 @@ const Documentation = () => {
                 Sample Parameter Link:
               </h1>
               <div className="ml-10 h-auto bg-slate-900 border-2 flex flex-wrap justify-between cursor-pointer  border-gray-200 rounded-lg   text-slate-200 px-3 py-1 text-lg font-mono my-2">
-                <h3 className="
- overflow-x-auto">
+                <button onClick={()=>{navigator.clipboard.writeText(URL +
+                  "/{version}/{API_SECRET_KEY}/delete_modal/{database_name}/{modal_name}");
+                  callcopiedtoaster()
+                  }} className=" overflow-x-auto text-left">
                   {URL +
                     "/{version}/{API_SECRET_KEY}/delete_modal/{database_name}/{modal_name}"}
-                </h3>
+                </button>
                 {/* <h2 className="text-slate-600 ">//Just for Example</h2> */}
               </div>
               <h1 className="ml-10 text-xl font-mono font-medium mt-5">
                 Example with values:
               </h1>
               <div className="ml-10 h-auto bg-slate-900 border-2 flex flex-wrap justify-between cursor-pointer  border-gray-200 rounded-lg   text-slate-200 px-3 py-1 text-lg font-mono my-2">
-                <h3 className=" overflow-x-auto">
+                <button onClick={()=>{navigator.clipboard.writeText(URL +
+                  "/1/m1715181391598/delete_modal/myproject/usermodal");
+                  callcopiedtoaster()
+                  }} className=" overflow-x-auto text-left">
                   {URL + "/1/m1715181391598/delete_modal/myproject/usermodal"}
-                </h3>
+                </button>
                 {/* <h2 className="text-slate-600 ">//Just for Example</h2> */}
               </div>
               <h1 className="ml-10 text-xl font-mono font-medium mt-5">
                 Response :
               </h1>
-              <img alt=""                 src={docs1}
+              <img alt=""                 src={docs9}
                 className="w-[90%] self-center mx-auto border border-black mt-5 rounded-lg"
               ></img>
             </div>
@@ -681,6 +756,7 @@ const Documentation = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };

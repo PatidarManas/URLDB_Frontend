@@ -4,8 +4,6 @@ import { useNavigate } from "react-router-dom";
 const NavBar = ({ islogin, isPrimeUser, user }) => {
   const history = useNavigate();
   const [open, setOpen] = React.useState(false);
-  const [flyer, setFlyer] = React.useState(false);
-  const [flyerTwo, setFlyerTwo] = React.useState(false);
 
   function logouthandler(e) {
     e.preventDefault();
@@ -54,7 +52,7 @@ const NavBar = ({ islogin, isPrimeUser, user }) => {
                 </svg>
               </button>
             </div>
-            <nav className="hidden md:flex space-x-10">
+            <nav className="hidden  md:flex space-x-10">
               <div className="relative flex gap-10">
                 {islogin ? (
                   <a
@@ -144,8 +142,8 @@ const NavBar = ({ islogin, isPrimeUser, user }) => {
         <div
           className={
             open
-              ? "opacity-100 scale-100 transition ease-out duration-200 absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden z-50"
-              : "opacity-0 scale-95 absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden z-50"
+              ? "block opacity-100 scale-100 transition ease-out duration-200 absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden z-50"
+              : "hidden scale-95 absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden z-50"
           }
         >
           <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
@@ -263,7 +261,7 @@ const NavBar = ({ islogin, isPrimeUser, user }) => {
                         />
                       </svg>
                       <span className="ml-3 text-base font-medium text-gray-900">
-                        Get Premium
+                         Premium
                       </span>
                     </a>
                   ) : (
