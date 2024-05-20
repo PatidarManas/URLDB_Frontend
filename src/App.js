@@ -12,8 +12,8 @@ import NavBar from './Pages/Navbar';
 import Loading from './Loading';
 import Aproject from './Pages/a++';
 function App() {
-  const URL = "https://urldb-backend.onrender.com";
-
+  const URL = "https://urldb-backend.vercel.app";
+  
   const[loading,setloading] = useState(true);
   const[islogin,setislogin] = useState(false);
   const[user,setuser] = useState({});

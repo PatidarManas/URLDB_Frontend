@@ -1,8 +1,7 @@
 import React from 'react'
 
 const Loading = () => {
-  const URL = "https://urldb-backend.onrender.com";
-
+  const URL = "https://urldb-backend.vercel.app";
   return (
     <div class="bg-gray-200 w-full min-h-screen flex flex-col justify-center items-center">
   <div class="flex flex-col min-h-screen w-full items-center justify-center bg-gray-200">

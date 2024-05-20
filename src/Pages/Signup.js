@@ -4,7 +4,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import NavBar from "./Navbar";
 const Signup = () => {
-  const URL = "https://urldb-backend.onrender.com";
+  const URL = "https://urldb-backend.vercel.app";
 
   const [name, setName] = useState();
   const [password, setPassword] = useState("");
