@@ -10,6 +10,7 @@ import GetPremiumPage from './Pages/GetPremiumPage';
 import { useEffect, useState } from 'react';
 import NavBar from './Pages/Navbar';
 import Loading from './Loading';
+import Aproject from './Pages/a++';
 function App() {
   const URL = "https://urldb-backend.onrender.com";
 
@@ -52,6 +53,7 @@ function App() {
       <Route path={"/dashboard"} element={loading?<Loading/> :<>{islogin?<Dashboard user={user}/> : <Login/> }</>}/>
       <Route path={"/premium"} element={loading?<Loading/> :<>{islogin ?<><NavBar isPrimeUser={islogin?user.isPrimeUser:false} islogin={islogin} user={user}/><GetPremiumPage/></>:<Login/> }</>}/>
       <Route path={"/loading"} element={<Loading/>}/>
+      <Route path={"/a++"} element={<Aproject/>}/>
       {/* <Route path={"/visualize/:database_name"} element={<>{<DatabaseVisualize/> }</>}/> */}
         
       </Routes>

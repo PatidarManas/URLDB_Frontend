@@ -12,7 +12,7 @@ import docs8 from "../Docs8.png";
 import docs9 from "../Docs9.png";
 
 const Documentation = () => {
-  const URL = "https://urldb-backend.onrender.com";
+  const URL = "https://urldb-backend.vercel.app";
 
 
   function callcopiedtoaster(){

@@ -7,7 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import NavBar from "./Navbar";
 
 const Login = () => {
-  const URL = "https://urldb-backend.onrender.com";
+  const URL = "https://urldb-backend.vercel.app";
   const history = useNavigate();
 
   const [password, setPassword] = useState("");

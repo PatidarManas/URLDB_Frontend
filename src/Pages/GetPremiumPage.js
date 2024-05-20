@@ -4,7 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function Sample3() {
-  const URL = "https://urldb-backend.onrender.com";
+  const URL = "https://urldb-backend.vercel.app";
   const history = useNavigate();
   const token = document.cookie;
   async function planselectedhandler(){
