@@ -1,4 +1,4 @@
-# URLDB_Frontend
+# URLDB Frontend
 Welcome to URLDB_Frontend! This repository contains the frontend codebase for a project that provides backend as a service. Users can effortlessly create, read, and delete databases, models, and data within them. With URLDB APIs, there's no need to set up your backend; you can directly utilize the services provided.
 
 ## About the Project
