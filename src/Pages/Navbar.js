@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import { useNavigate } from "react-router-dom";
 const NavBar = ({ islogin, isPrimeUser, user }) => {
@@ -11,6 +11,16 @@ const NavBar = ({ islogin, isPrimeUser, user }) => {
     history("../login");
     window.location.reload();
   }
+  const [text, setText] = useState('Version 2(new)');
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setText((prevText) => (prevText === 'Version 2(new)' ? 'Coming Soon' : 'Version 2(new)'));
+    }, 2000); // Change text every 2 seconds
+
+    return () => clearInterval(interval); // Cleanup on component unmount
+  }, []);
+  
   return (
     <>
       {/* This example requires Tailwind CSS v2.0+ */}
@@ -94,6 +104,17 @@ const NavBar = ({ islogin, isPrimeUser, user }) => {
                 >
                   About Us
                 </a>
+                <a
+                  href="/v2"
+                  className="
+                     cursor-pointer group bg-white rounded-md text-gray-500 inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 pb-8'
+                    "
+                >
+                  <div className="text-base font-semibold  text-yellow-500 hover:text-red-500 rounded-md g">
+        {text}
+      </div>
+                </a>
+                
               </div>
             </nav>
             <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
